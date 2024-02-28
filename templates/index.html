@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Weather App</title>
+  </head>
+  <body>
+    <h1>Weather App</h1>
+    <form method="post">
+      <input type="text" name="city" placeholder="Enter a City Name" />
+      <button type="submit">Get Weather</button>
+    </form>
+    {% if weather %}
+    <div>{{ weather|safe }}</div>
+    {% elif error %}
+    <div>{{ error }}</div>
+    {% endif %}
+  </body>
+</html>
